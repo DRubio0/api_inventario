@@ -7,7 +7,14 @@ use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
-   
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        // hola
+    }
+
     /**
      * Store a newly created resource in storage.
      */
