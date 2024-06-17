@@ -10,3 +10,5 @@ Route::middleware(['api'])->group(function () {
     Route::post('/login', [UserController::class, 'login']);
     Route::post('/logout', [UserController::class, 'logout']);
 });
+
+

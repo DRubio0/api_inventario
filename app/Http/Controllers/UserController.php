@@ -44,18 +44,15 @@ class UserController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        // ! <-- negacion
-        // || <-- or
-
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json(['message' => 'Las credenciales no coinciden'], 401);
-        }
+        }     
 
         return response()->json(['message' => 'Inicio de sesión exitoso', 'user' => $user]);
     }
 
     public function logout(Request $request)
     {
-        return response()->json(['message' => 'La sesion a sidom cerrada correctamente']);
+        return response()->json(['message' => 'La sesion a sido cerrada correctamente']);
     }
 }
